@@ -1,11 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import React from "react";
+import classes from "./App.module.css";
+import Profile from "./components/Profile";
+import ProfileImg from "./assets/profile__img.jpg";
 
 function App() {
-	const [count, setCount] = useState(0);
-
-	return <div>Hello world</div>;
+	return (
+		<div className={classes.app}>
+			<Profile name="Annette Black" image={ProfileImg} />
+		</div>
+	);
 }
 
 export default App;

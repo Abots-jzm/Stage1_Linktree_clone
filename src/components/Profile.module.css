@@ -1,0 +1,122 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2.4rem;
+	margin-bottom: 5.6rem;
+	position: relative;
+}
+
+.shareDesktop {
+	position: absolute;
+	top: -2rem;
+	right: -28.4rem;
+	height: 4rem;
+	width: 4rem;
+	border-radius: 50%;
+	background-color: #ffffff;
+	border: 1px solid #d0d5dd;
+	color: #98a2b3;
+	border-style: dashed;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+
+	transition: all 0.2s;
+}
+
+.shareDesktop:hover {
+	background-color: #f9fafb;
+	color: #667085;
+}
+
+.shareDesktop:active,
+.shareDesktop:focus {
+	background-color: #ffffff;
+	color: #98a2b3;
+	box-shadow: 0px 0px 0px 4px #f2f4f7;
+}
+
+.toolTip {
+	background-color: #101828;
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #fff;
+	padding: 0.8rem 1.2rem;
+	width: max-content;
+	border-radius: 8px;
+	position: absolute;
+	z-index: 1;
+	right: 130%;
+	visibility: hidden;
+	opacity: 0;
+
+	transition: opacity 0.2s;
+}
+
+.toolTip::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent transparent #101828;
+}
+
+.shareDesktop:hover .toolTip {
+	visibility: visible;
+	opacity: 1;
+}
+
+.pictureContainer {
+	position: relative;
+}
+
+.picture {
+	width: 8.8rem;
+	height: 8.8rem;
+	overflow: hidden;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.pictureOverlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: rgba(52, 64, 84, 0.75);
+	opacity: 0;
+	visibility: none;
+
+	transition: opacity 0.2s;
+}
+
+.pictureOverlay div {
+	margin: 5.8rem auto 0;
+	width: 2rem;
+}
+
+.picture:hover .pictureOverlay {
+	visibility: visible;
+	opacity: 1;
+}
+
+.picture:focus,
+.picture:active {
+	outline: 5.5px solid #ebe9fe;
+}
+
+.name {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #101828;
+}
+
+@media only screen and (max-width: 480px) {
+	.container {
+		margin-bottom: 3.2rem;
+	}
+}
