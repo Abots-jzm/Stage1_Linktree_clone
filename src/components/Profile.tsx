@@ -11,6 +11,7 @@ interface Props {
 export default function Profile({ image, name }: Props) {
 	return (
 		<section className={classes.container}>
+			<div className={classes.shareMobile}>&middot;&middot;&middot;</div>
 			<div className={classes.pictureContainer}>
 				<div className={classes.shareDesktop}>
 					<ShareIcon />

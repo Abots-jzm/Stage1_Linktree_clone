@@ -7,13 +7,13 @@
 	position: relative;
 }
 
+.shareMobile,
 .shareDesktop {
 	position: absolute;
 	top: -2rem;
-	right: -28.4rem;
-	height: 4rem;
-	width: 4rem;
 	border-radius: 50%;
+	width: 4rem;
+	height: 4rem;
 	background-color: #ffffff;
 	border: 1px solid #d0d5dd;
 	color: #98a2b3;
@@ -25,11 +25,25 @@
 	transition: all 0.2s;
 }
 
+.shareMobile {
+	right: 0;
+	font-size: 2.4rem;
+	display: none;
+	user-select: none;
+}
+
+.shareDesktop {
+	right: -28.4rem;
+}
+
+.shareMobile:hover,
 .shareDesktop:hover {
 	background-color: #f9fafb;
 	color: #667085;
 }
 
+.shareMobile:active,
+.shareMobile:focus,
 .shareDesktop:active,
 .shareDesktop:focus {
 	background-color: #ffffff;
@@ -115,8 +129,16 @@
 	color: #101828;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
 	.container {
 		margin-bottom: 3.2rem;
+	}
+
+	.shareDesktop {
+		display: none;
+	}
+
+	.shareMobile {
+		display: grid;
 	}
 }
