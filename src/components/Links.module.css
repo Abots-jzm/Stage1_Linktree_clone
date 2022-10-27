@@ -5,6 +5,14 @@
 	gap: 2.4rem;
 }
 
+.bottom {
+	margin-top: 4.8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2.4rem;
+}
+
 @media only screen and (max-width: 600px) {
 	.container {
 		margin-top: 3.2rem;
