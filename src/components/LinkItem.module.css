@@ -25,10 +25,20 @@
 	background-color: #eaecf0;
 }
 
+.item p {
+	font-size: 1.4rem;
+	color: #667085;
+	margin-top: 1.2rem;
+}
+
 @media only screen and (max-width: 600px) {
 	.item,
 	.item:link,
 	.item:visited {
 		font-size: 1.4rem;
+	}
+
+	.item p {
+		font-size: 1.2rem;
 	}
 }
