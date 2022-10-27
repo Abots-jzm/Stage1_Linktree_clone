@@ -1,7 +1,6 @@
 .item,
 .item:link,
 .item:visited {
-	background-color: red;
 	width: 100%;
 	padding: 2.4rem;
 	text-align: center;
@@ -24,4 +23,12 @@
 .item:focus {
 	outline: 1px solid #98a2b3;
 	background-color: #eaecf0;
+}
+
+@media only screen and (max-width: 600px) {
+	.item,
+	.item:link,
+	.item:visited {
+		font-size: 1.4rem;
+	}
 }

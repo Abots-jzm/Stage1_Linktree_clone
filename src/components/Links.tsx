@@ -6,13 +6,23 @@ import SlackSVG from "../assets/slack.svg";
 
 export default function Links() {
 	return (
-		<div className={classes.container}>
-			<LinkItem>Twitter Link</LinkItem>
-			<LinkItem>Zuri Team</LinkItem>
-			<LinkItem>Zuri Books</LinkItem>
-			<LinkItem>Python Books</LinkItem>
-			<LinkItem>Background Check for Coders</LinkItem>
-			<LinkItem>Design Books</LinkItem>
+		<main className={classes.container}>
+			<LinkItem url="https://twitter.com/The_Jazzmann">Twitter Link</LinkItem>
+			<LinkItem url="https://training.zuri.team" id="btn__zuri">
+				Zuri Team
+			</LinkItem>
+			<LinkItem url=" http://books.zuri.team" id="books">
+				Zuri Books
+			</LinkItem>
+			<LinkItem url="https://books.zuri.team/python-for-beginners?ref_id=abotsjzm" id="book__python">
+				Python Books
+			</LinkItem>
+			<LinkItem url="https://backgroundcheck.zuri.team" id="pitch">
+				Background Check for Coders
+			</LinkItem>
+			<LinkItem url="https://books.zuri.team/design-rules" id="book__design">
+				Design Books
+			</LinkItem>
 			<div className={classes.bottom}>
 				<div>
 					<img src={SlackSVG} alt="slack" />
@@ -21,6 +31,6 @@ export default function Links() {
 					<img src={GithubSVG} alt="github" />
 				</div>
 			</div>
-		</div>
+		</main>
 	);
 }

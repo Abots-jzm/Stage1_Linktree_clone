@@ -10,14 +10,14 @@ interface Props {
 
 export default function Profile({ image, name }: Props) {
 	return (
-		<section className={classes.container}>
+		<header className={classes.container}>
 			<div className={classes.shareMobile}>&middot;&middot;&middot;</div>
 			<div className={classes.pictureContainer}>
 				<div className={classes.shareDesktop}>
 					<ShareIcon />
 					<span className={classes.toolTip}>Share Link</span>
 				</div>
-				<div className={classes.picture}>
+				<div className={classes.picture} id="profile__img">
 					<div className={classes.pictureOverlay}>
 						<div>
 							<img src={CameraSVG} alt="cameraIcon" />
@@ -26,7 +26,12 @@ export default function Profile({ image, name }: Props) {
 					<img src={image} alt="profile picture" />
 				</div>
 			</div>
-			<div className={classes.name}>{name}</div>
-		</section>
+			<div className={classes.name} id="twitter">
+				{name}
+			</div>
+			<div className="hidden" id="slack">
+				abotsjzm
+			</div>
+		</header>
 	);
 }
